@@ -1,17 +1,16 @@
 import { useState, useEffect } from 'react'
-import "prismjs/themes/prism-tomorrow.css"
-import Editor from "react-simple-code-editor"
-import prism from "prismjs"
-import Markdown from "react-markdown"
-import rehypeHighlight from "rehype-highlight";
-// import "highlight.js/styles/github-dark.css";
-import axios from 'axios'
-import './App.css'
+import "prismjs/themes/prism-tomorrow.css" // PrismJS theme for syntax highlighting
+import Editor from "react-simple-code-editor" // Code editor component
+import prism from "prismjs" // Library used for syntax highlighting
+import Markdown from "react-markdown" // For rendering markdown in the review output
+import rehypeHighlight from "rehype-highlight" // Highlight plugin for markdown rendering
+import axios from 'axios' // For sending requests to the backend
+import './App.css' 
 
 function App() {
-  const [code, setCode] = useState(`function sum() {
+  const [code, setCode] = useState(`function sum() { 
   return 1 + 1
-}`)
+}`)  //Initial code 
 
   const [review, setReview] = useState('')
   const [clicked, setClicked] = useState(false)
@@ -42,7 +41,7 @@ function App() {
                 fontFamily: '"Fira code", "Fira Mono", monospace',
                 fontSize: 16,
                 border: "1px solid #ddd",
-                borderRadius: "5px",
+                borderRadius: "0.7rem",
                 height: "100%",
                 width: "100%",
                 backgroundColor: "#2d2d2d",
@@ -53,12 +52,12 @@ function App() {
           </div>
           <div
             onClick={reviewCode}
-            className={`review ${clicked ? 'clicked' : ''}`}>
+            className={`review ${clicked ? 'clicked' : ''}`}> 
             Review
           </div>
         </div>
         <div className="right">
-          <Markdown rehypePlugins={[rehypeHighlight]}>
+          <Markdown rehypePlugins={[rehypeHighlight]}> 
             {review}
           </Markdown>
         </div>

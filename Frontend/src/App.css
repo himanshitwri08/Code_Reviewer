@@ -28,7 +28,7 @@ main .right {
 }
 
 main .left .review.clicked {
-  background-color: rgb(180, 180, 240); /* Slightly darker */
+  background-color: rgb(180, 180, 240); 
 }
 
 main .left {
@@ -42,9 +42,15 @@ main .left {
   height: 100%;
   width: 100%;
   margin: 0;
-  border-radius: 0.7rem;
+  border-radius: 0.5rem;
   background-color: #0c0c0c;
 }
+
+.left .code {
+  overflow: hidden;
+  border-radius: 0.7rem; 
+}
+
 
 .review.clicked {
   background-color: #9999ff ;
